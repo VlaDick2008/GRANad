@@ -1,0 +1,111 @@
+// COMMON
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.section-inner {
+  margin: 0 auto;
+  max-width: 1520px;
+}
+
+// LINKS LINE
+.section-gray-line {
+  z-index: 10000;
+
+  .section-line-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+    background-color: $splash-color;
+
+    .section-line-text,
+    .section-line-img {
+      margin-right: 35px;
+    }
+
+    .section-line-img:last-child {
+      margin-right: 0;
+    }
+
+    .add-text {
+      margin: 0;
+    }
+
+    .section-line-img {
+      img {
+        width: 45px;
+        height: auto;
+        transition: all 0.1s;
+
+        &:hover {
+          filter: drop-shadow(6px 6px 8px rgba(0, 0, 0, 0.25));
+        }
+      }
+    }
+
+    .section-line-text {
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    @media (max-width: $breakpoint-max-sm) {
+      height: 65px;
+
+      .section-line-text,
+      .section-line-img {
+        margin-right: 20px;
+      }
+
+      .add-text {
+        margin: 0;
+      }
+
+      .section-line-img {
+        img {
+          width: 30px;
+        }
+      }
+
+      .section-line-text {
+        font-weight: 300;
+        font-size: 12px;
+      }
+    }
+  }
+}
